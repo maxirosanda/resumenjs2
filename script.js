@@ -48,4 +48,20 @@ productos.sort((a,b)=>{ //8
     return 0
 
 })
+const numeros2 = [5, 3, 2, 6, 1, 4]
+numeros2.sort((a, b) => b - a);  
+
+const palabras = ["hola", "chau", "auto","teatro"]
+
+palabras.sort((a,b)=>{ 
+
+    if(a > b){
+        return 1
+    }
+    if(a < b){
+        return -1
+    }
+    return 0
+
+})
 */
