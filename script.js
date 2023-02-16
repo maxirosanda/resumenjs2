@@ -1,4 +1,15 @@
+/*
+OPERADORES LÓGICOS Y RELACIONALES
 
+== Es igual a == b
+=== Es estrictamente igual a === b
+!= Es distinto a != b
+!== Es estrictamente distinto a != b
+<, <=, >, >= Menor, menor o igual, mayor, mayor o igual a <= b
+&& Operador and (y) a && b
+|| Operador or (o) a || b
+! Operador not (no) !a
+*/
 // Metodos de arrays
 /*
 const productos = ["Heladera","televisor","radio","microondas"]
