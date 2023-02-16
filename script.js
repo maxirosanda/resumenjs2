@@ -76,3 +76,10 @@ palabras.sort((a,b)=>{
 
 })
 */
+document.getElementById("productos")
+const productos = document.getElementsByClassName("producto")
+const div = document.getElementsByTagName("div")
+div[0].innerHTML = "<div></div>"
+div[1].innerText = "hola"
+document.querySelector(".productos")
+document.querySelectorAll(".productos")
