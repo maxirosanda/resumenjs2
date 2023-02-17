@@ -80,6 +80,7 @@ palabras.sort((a,b)=>{
 */
 
 //DOM
+/*
 const contenedorProductos = document.getElementById("productos")
 let contenedor = document.createElement("div")
 let p = document.createElement("p")
@@ -111,3 +112,4 @@ for(const producto of productos){
 productos[2].remove()
 document.querySelector(".producto")
 document.querySelectorAll(".producto")
+*/
