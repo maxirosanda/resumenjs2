@@ -113,3 +113,32 @@ productos[2].remove()
 document.querySelector(".producto")
 document.querySelectorAll(".producto")
 */
+
+//EVENTOS
+
+//Eventos del mouse
+/*
+mousedown/: Se oprime/suelta el botón del ratón sobre un elemento.
+mouseover/mouseout:  El puntero del mouse se mueve sobre/sale del elemento.
+mousemove: El movimiento del mouse sobre el elemento activa el evento.
+click: Se activa después de mousedown o mouseup sobre un elemento válido.
+*/
+
+//Eventos de teclado
+/*
+keydown: Cuando se presiona o se mantiene presinada
+keyup: Cuando se suelta una tecla.
+*/
+//Eventos Input
+/*
+onchange: cuando se sale del input
+input: cuando se escribe en el input
+*/
+
+//Evento Formulario
+/*
+submit
+e.preventDefault();
+e.target.children[0].value
+*/
+
