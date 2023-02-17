@@ -1,6 +1,6 @@
-/*
-OPERADORES LÓGICOS Y RELACIONALES
 
+//OPERADORES LÓGICOS Y RELACIONALES
+/*
 == Es igual a == b
 === Es estrictamente igual a === b
 != Es distinto a != b
@@ -10,7 +10,9 @@ OPERADORES LÓGICOS Y RELACIONALES
 || Operador or (o) a || b
 ! Operador not (no) !a
 */
-// Metodos de arrays
+
+
+// METODOS DE ARRAYS
 /*
 const productos = ["Heladera","televisor","radio","microondas"]
 productos.push("lavaropas") //1 
@@ -27,7 +29,7 @@ let existe = productos.includes("Heladera") //11
 */
 
 
-//Metodos de busqueda y transformacion
+//METODOS DE BUSQUEDA Y TRANSFORMACION
 /*
 const productos = [
     {nombre:"heladera",precio:150000,stock:5},
@@ -76,10 +78,36 @@ palabras.sort((a,b)=>{
 
 })
 */
-document.getElementById("productos")
-const productos = document.getElementsByClassName("producto")
+
+//DOM
+const contenedorProductos = document.getElementById("productos")
+let contenedor = document.createElement("div")
+let p = document.createElement("p")
+let p2 = document.createElement("p")
+p.innerText = "Hola Mundo"
+p2.innerText = "chau"
+p3 = document.createElement("p")
+p3.innerText = "contar"
+p3.className="row justify-content-center" //pisa las clases que tenia
+p3.className = "col-12"
+console.log(p3.innerText)
+contenedor.append(p,p2)
+contenedor.prepend(p3)
+contenedorProductos.append(contenedor)
+
+
 const div = document.getElementsByTagName("div")
 div[0].innerHTML = "<div></div>"
 div[1].innerText = "hola"
-document.querySelector(".productos")
-document.querySelectorAll(".productos")
+div[0].style.background = "black"
+div[0].style.color = "white"
+const productos = document.getElementsByClassName("producto")
+for(const producto of productos){
+    producto.classList.add("estilos","maxi")
+    producto.classList.remove("estilos")
+    producto.classList.replace("maxi","pitu")
+    producto.setAttribute ("name","hola")
+}
+productos[2].remove()
+document.querySelector(".producto")
+document.querySelectorAll(".producto")
