@@ -238,4 +238,8 @@ const {
 } = objeto
 
 console.log(nombreAlumno)
-
+//desetructuracion en parametros
+const funcionDestructuracion = ({nombre,apellido,habilitado,cursos:{javascript}}) =>{
+    console.log(nombre)
+}
+funcionDestructuracion(objeto)
