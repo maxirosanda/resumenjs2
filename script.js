@@ -142,3 +142,100 @@ e.preventDefault();
 e.target.children[0].value
 */
 
+// Localstorage y SessionStorage
+/*
+localStorage.setItem("dato1","primer dato de prueba")
+console.log(localStorage.getItem("dato1"))
+localStorage.setItem("dato2","segundo dato de prueba")
+console.log(localStorage.getItem("dato2"))
+console.log(localStorage.length)
+//localStorage.removeItem("dato2")
+//localStorage.clear()
+const objeto = {
+    nombre: "maxi",
+    apellido:"rosanda",
+    habilitado:true,
+    cursos:{
+        javascript:15000
+    }
+}
+const objetoJson = JSON.stringify(objeto)
+console.log(objeto)
+console.log(objetoJson)
+const objetojs = JSON.parse(objetoJson)
+console.log(objetojs)
+
+for(let i = 0 ;i < localStorage.length;i++){
+   let clave = localStorage.key(i)
+   console.log("clave:" + clave)
+   console.log("Valor: " +  localStorage.getItem(clave)) 
+}
+sessionStorage.setItem("dato3","este es el dato 3")
+console.log(sessionStorage.getItem("dato3"))
+*/
+
+//Operadores Avanzados
+let i = 0
+i+=1
+i+=2
+i++
+console.log(i)
+
+const condicion = false
+
+let variable = condicion == true ? "verdadero":"falso"
+console.log(variable)
+condicion == false && console.log("verdadero")
+
+//operador ||
+/*
+console.log(0 || "sale el segundo valor")
+console.log(40 || "sale el segundo valor")
+console.log(null|| "sale el segundo valor")
+console.log(undefined || "sale el segundo valor")
+console.log( "Hola mundo" || "sale el segundo valor")
+console.log("" || "sale el segundo valor")
+console.log(NaN|| "sale el segundo valor")
+console.log(true || "sale el segundo valor")
+console.log(false|| "sale el segundo valor")
+*/
+console.log("------------------------------------------------")
+// operador ??
+/*
+console.log(0 ?? "sale el segundo valor")
+console.log(40 ?? "sale el segundo valor")
+console.log(null ?? "sale el segundo valor")
+console.log(undefined ?? "sale el segundo valor")
+console.log( "Hola mundo" ?? "sale el segundo valor")
+console.log("" ?? "sale el segundo valor")
+console.log(NaN ?? "sale el segundo valor")
+console.log(true ?? "sale el segundo valor")
+console.log(false ?? "sale el segundo valor")
+*/
+const objeto = {
+    nombre: "maxi",
+    apellido:"rosanda",
+    habilitado:true,
+    cursos:{
+        javascript:15000
+    }
+}
+const valor = objeto?.cursos?.javascript || "no existe el curso"
+console.log(valor)
+const valor2 = objeto.cursos?.dw || "no existe el curso"
+console.log(valor2)
+
+//desestructuracion
+const { nombre , apellido } = objeto
+console.log(nombre)
+console.log(apellido)
+const { habilitado , cursos:{javascript} } = objeto
+console.log(javascript)
+//alias desestructuracion
+const {
+    nombre:nombreAlumno,
+    apellido:apellidoAlumno
+} = objeto
+
+console.log(nombreAlumno)
+
