@@ -175,6 +175,7 @@ console.log(sessionStorage.getItem("dato3"))
 */
 
 //Operadores Avanzados
+/*
 let i = 0
 i+=1
 i+=2
@@ -186,7 +187,7 @@ const condicion = false
 let variable = condicion == true ? "verdadero":"falso"
 console.log(variable)
 condicion == false && console.log("verdadero")
-
+*/
 //operador ||
 /*
 console.log(0 || "sale el segundo valor")
@@ -212,6 +213,7 @@ console.log(NaN ?? "sale el segundo valor")
 console.log(true ?? "sale el segundo valor")
 console.log(false ?? "sale el segundo valor")
 */
+/*
 const objeto = {
     nombre: "maxi",
     apellido:"rosanda",
@@ -264,3 +266,46 @@ const max = (...numeros)=>{
 }
 
 max(12,232,12,12)
+*/
+//get all
+fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => console.log(json))
+//get
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+// create
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+
+  //update
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+// delete
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+})
