@@ -309,3 +309,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE',
 })
+//query
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1&title=foo')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
