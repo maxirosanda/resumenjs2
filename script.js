@@ -243,3 +243,24 @@ const funcionDestructuracion = ({nombre,apellido,habilitado,cursos:{javascript}}
     console.log(nombre)
 }
 funcionDestructuracion(objeto)
+//desestructuracion de arrays
+const array = ["hola","chau","miercoles"]
+let [a,b,c] = array
+console.log(a , b , c)
+let [ , ,d] = array
+console.log(d)
+//spread
+console.log(...array)
+const numeros = [121,121,2121,223,434]
+console.log(Math.max(...numeros))
+const mixto = [...array,...numeros]
+console.log(mixto)
+const objeto2 = {...objeto}
+console.log(objeto2)
+//rest parameters
+const max = (...numeros)=>{
+    console.log(numeros)
+    console.log(numeros.reduce((acc,n)=> acc + n,0))
+}
+
+max(12,232,12,12)
