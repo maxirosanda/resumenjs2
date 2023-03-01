@@ -267,11 +267,21 @@ const max = (...numeros)=>{
 
 max(12,232,12,12)
 */
+const autos = new Promise((res,rej)=>{
+    setTimeout(()=>{
+        res("hola")
+    },3000)
+    
+}).then((data)=>{
+    console.log(data)
+})
 //get all
 fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(json => console.log(json))
+
 //get
+/*
 fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
       .then(json => console.log(json))
@@ -313,3 +323,4 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 fetch('https://jsonplaceholder.typicode.com/posts?userId=1&title=foo')
   .then((response) => response.json())
   .then((json) => console.log(json));
+  */
